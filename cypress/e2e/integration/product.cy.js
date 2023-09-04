@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-describe('Testing shopping cart funcionalities', () => {
+describe('Testing products functionalities', () => {
     beforeEach(() => {
         cy.visit('https://demo.reactstorefront.io/')
     })
@@ -15,5 +15,11 @@ describe('Testing shopping cart funcionalities', () => {
         cy.get('.jss254').contains('Qty: 1')
         cy.get('.jss252').contains('$10.99')
         cy.get('.MuiDialogActions-root > .MuiButtonBase-root > .MuiButton-label').click()
+    })
+
+    it('should remove items when required', () => {
+        cy.visit('https://demo.reactstorefront.io/cart')
+        cy.get(':nth-child(1) > .jss70 > .MuiIconButton-label > .MuiSvgIcon-root').click()
+        cy.get(':nth-child(1) > .MuiButton-label').click()
     })
 })
