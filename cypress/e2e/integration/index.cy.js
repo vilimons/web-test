@@ -1,5 +1,3 @@
-/// <reference types='Cypress' />
-
 describe('Visit the index and verify its content', () => {
     beforeEach(() => {
         cy.visit('https://demo.reactstorefront.io/');

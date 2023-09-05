@@ -1,5 +1,3 @@
-/// <reference types="Cypress" />
-
 describe('Verifying search bar functionality', () => {
     beforeEach(() => {
         cy.visit('https://demo.reactstorefront.io/');
