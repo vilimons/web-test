@@ -10,6 +10,8 @@ describe('Testing products functionalities', () => {
         cy.url().should('include', 'p/1')
         cy.get('.MuiGrid-container > :nth-child(4) > .MuiButtonBase-root').click()
         cy.get('.MuiDialogActions-root > .MuiButtonBase-root > .MuiButton-label').click()
+
+        cy.get('.MuiContainer-root > :nth-child(1) > .MuiTypography-root').should('have.text', 'My Cart (1 item)')
     })
 
     it('should remove items when required', () => {
